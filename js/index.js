@@ -3,13 +3,33 @@
 // transform the size of text when hovered over ( Paragraphs and some images)
 // Add color in sign me up buttons when clicked
 //
+const intro = document.querySelector(".intro")
+intro.addEventListener("mousemove",event => { event.target.style.backgroundColor = "yellow"})
 
+const content = document.querySelector(".content-section")
+content.addEventListener("mousemove",event => event.target.style.backgroundColor = "red")
+
+const inverseContent = document.querySelector(".inverse-content")
+inverseContent.addEventListener("mousemove",event => event.target.style.backgroundColor = "pink")
+
+const contentDestination = document.querySelector(".content-destination")
+contentDestination.addEventListener("mousemove",event => event.target.style.backgroundColor = "orange")
+
+const navigation = document.querySelector(".main-navigation")
+navigation.addEventListener("mousedown", event => { event.target.style.backgroundColor ="yellow"})
+navigation.addEventListener("mouseup", event => {event.target.style.backgroundColor = "green"})
+
+const images = document.querySelectorAll("img")
+images[0].addEventListener("mousedown", event => event.target.style.transform = "scaleX(.5)")
+images[1].addEventListener("mousedown", event => event.target.style.transform = "scaleX(.7)")
+images[2].addEventListener("mousedown", event => event.target.style.transform = "scaleY(.7)")
+images[3].addEventListener("mousedown", event => event.target.style.transform = "scaleX(.8)")
 
 
 const links = document.querySelectorAll("a")
 console.log(links);
 links[0].addEventListener("mouseover", event => event.target.style.color = "orangeRed")
-links[1].addEventListener("mouseover", event => event.target.style.transform = "rotate(25deg)")
+links[1].addEventListener("mouseover", event => event.target.style.transform = "rotate(30deg)")
 links[2].addEventListener("mouseover", event => event.target.style.transform = "rotate(45deg)")
 links[3].addEventListener("mouseover", event => event.target.style.transform = "rotate(50deg)")
 
